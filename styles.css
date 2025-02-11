@@ -143,14 +143,6 @@ button:hover {
   display: none;
 }
 
-#imageContainer h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #ff6f61; /* A nice pink color */
-  text-align: center;
-  animation: fadeIn 1s ease-in-out; /* Optional: Add a fade-in animation */
-}
-
 /* Media Queries for Larger Screens */
 @media (min-width: 768px) {
   .container {
