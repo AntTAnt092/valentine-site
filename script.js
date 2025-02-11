@@ -16,3 +16,5 @@ document.getElementById('yesButton').addEventListener('click', function () {
 document.getElementById('noButton').addEventListener('click', function () {
   document.getElementById('response').innerText = "Ok, ne moraš! 😢";
 });
+
+console.log("sretno valentino");
