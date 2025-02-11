@@ -1,7 +1,19 @@
 // Handle button clicks
 document.getElementById('yesButton').addEventListener('click', function () {
   const music = document.getElementById('backgroundMusic');
-  music.play(); // Start playing music
+  
+  // Ensure music starts only after user interaction
+  if (music.paused) {
+    music.play()
+      .then(() => {
+        console.log("Music started playing.");
+      })
+      .catch((error) => {
+        console.error("Failed to play music:", error);
+        alert("Please allow audio playback in your browser settings.");
+      });
+  }
+
   document.getElementById('response').innerText = "Aww, iako znao sam da ćeš reći da😎! 💖";
   const imageContainer = document.getElementById('imageContainer');
   imageContainer.style.display = 'flex'; // Show the images
