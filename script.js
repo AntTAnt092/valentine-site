@@ -1,12 +1,7 @@
-// Play background music when the music button is clicked
-document.getElementById('musicButton').addEventListener('click', function () {
-  const music = document.getElementById('backgroundMusic');
-  music.play();
-  this.style.display = 'none'; // Hide the button after clicking
-});
-
 // Handle button clicks
 document.getElementById('yesButton').addEventListener('click', function () {
+  const music = document.getElementById('backgroundMusic');
+  music.play(); // Start playing music
   document.getElementById('response').innerText = "Aww, iako znao sam da ćeš reći da😎! 💖";
   const imageContainer = document.getElementById('imageContainer');
   imageContainer.style.display = 'flex'; // Show the images
