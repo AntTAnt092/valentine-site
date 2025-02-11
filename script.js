@@ -25,7 +25,22 @@ document.getElementById('menuButton').addEventListener('click', function () {
 window.addEventListener('click', function (event) {
   const dropdown = document.getElementById('menuDropdown');
   const menuButton = document.getElementById('menuButton');
-  if (!menuButton.contains(event.target) {
+  if (!menuButton.contains(event.target)) {
+    dropdown.classList.remove('show');
+  }
+});
+
+// Toggle Menu Dropdown
+document.getElementById('menuButton').addEventListener('click', function () {
+  const dropdown = document.getElementById('menuDropdown');
+  dropdown.classList.toggle('show');
+});
+
+// Close dropdown if clicked outside
+window.addEventListener('click', function (event) {
+  const dropdown = document.getElementById('menuDropdown');
+  const menuButton = document.getElementById('menuButton');
+  if (!menuButton.contains(event.target)) {
     dropdown.classList.remove('show');
   }
 });
