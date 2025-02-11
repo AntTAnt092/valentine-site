@@ -156,23 +156,6 @@ button:hover {
   display: none;
 }
 
-#musicButton {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5px;
-  background: #ff6f61;
-  color: white;
-  cursor: pointer;
-  transition: transform 0.2s, background 0.2s;
-}
-
-#musicButton:hover {
-  transform: scale(1.1);
-  background: #ff4a3d;
-}
-
 /* Media Queries for Larger Screens */
 @media (min-width: 768px) {
   .container {
