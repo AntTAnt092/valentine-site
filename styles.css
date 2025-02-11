@@ -6,7 +6,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   text-align: center;
   background-image: url('477fe3ee-c74d-4ea0-b59d-61c1aec8d1d9.webp');
   background-size: cover;
@@ -26,10 +26,12 @@ body {
 
 .container {
   background: rgba(0, 0, 0, 0.5);
-  padding: 30px;
+  padding: 20px;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
   animation: slideIn 1.5s ease-in-out;
+  max-width: 90%;
+  margin: 20px;
 }
 
 @keyframes slideIn {
@@ -44,8 +46,8 @@ body {
 }
 
 h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+  font-size: 2rem;
+  margin-bottom: 15px;
   animation: pulse 2s infinite;
 }
 
@@ -62,13 +64,13 @@ h1 {
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin: 10px 0;
 }
 
 h2 {
-  font-size: 2rem;
-  margin: 20px 0;
+  font-size: 1.5rem;
+  margin: 15px 0;
   animation: bounce 1.5s infinite;
 }
 
@@ -83,15 +85,17 @@ h2 {
 
 .buttons {
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 button {
   padding: 10px 20px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin: 0 10px;
   transition: transform 0.2s, background 0.2s;
 }
 
@@ -111,7 +115,7 @@ button:hover {
 
 #response {
   margin-top: 20px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
   animation: fadeIn 1s ease-in-out;
 }
@@ -120,12 +124,14 @@ button:hover {
   display: none; /* Hidden by default */
   margin-top: 20px;
   animation: popUp 1s ease-in-out;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 #imageContainer img {
-  width: 150px; /* Adjust size as needed */
-  height: 150px;
-  margin: 10px;
+  width: 100px; /* Smaller size for mobile */
+  height: 100px;
+  margin: 5px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease-in-out;
@@ -165,4 +171,33 @@ button:hover {
 #musicButton:hover {
   transform: scale(1.1);
   background: #ff4a3d;
+}
+
+/* Media Queries for Larger Screens */
+@media (min-width: 768px) {
+  .container {
+    padding: 30px;
+    max-width: 600px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .buttons {
+    flex-direction: row;
+  }
+
+  #imageContainer img {
+    width: 150px; /* Larger size for PC */
+    height: 150px;
+  }
 }
