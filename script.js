@@ -24,5 +24,5 @@ document.getElementById('noButton').addEventListener('click', function () {
   const music = document.getElementById('backgroundMusic');
   music.pause(); // Stop playing music
   music.currentTime = 0; // Reset music to the beginning
-  document.getElementById('response').innerText = "Ok, ne moraš! 😢";
+  document.getElementById('response').innerText = "Not an option! 😢";
 });
